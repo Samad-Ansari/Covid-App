@@ -1,0 +1,27 @@
+<div class="row  pt-5">
+  <div class="col-md-6 mx-auto">
+    <div class="alert alert-danger" *ngIf="errorMsg">
+     {{ errorMsg }}
+    </div>
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Register</h3>
+      </div>
+      <div class="card-body">
+        <form #registerForm="ngForm" novalidate class="form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input #email="ngModel" [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="registerUserData.email" name="email" type="email" class="form-control rounded-0" required>
+            <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input #password="ngModel" [(ngModel)]="registerUserData.password" name="password" type="password" [class.is-invalid]="password.invalid && password.touched" class="form-control rounded-0" required>
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+          </div>
+          <button (click)="registerUser(registerForm.value)" [disabled]="registerForm.invalid"  type="button" class="btn btn-primary float-right">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>  
+</div>

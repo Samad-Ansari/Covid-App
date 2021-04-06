@@ -1,0 +1,16 @@
+ <h3 class="mt-3 text-center">Admin Contact</h3>
+ <hr>
+<div class="row">
+	<div class="col-md-10">
+	<ng-container *ngFor="let contact of contacts">	
+		<div class="card mt-3">
+		  <h5 class="card-header">{{ contact.name }} <button (click)="doDelete(contact)" class="btn btn-danger pull-right  btn-sm m-2"><i class="fa fa-trash-o" aria-hidden="true"></i></button></h5>
+		  <div class="card-body">
+		    <h6 class="card-title text-muted">{{ contact.email }}</h6><hr>
+		    <p class="card-text">{{contact.message}}</p>
+		    <h6 class="text-muted">{{ contact.phone }}</h6>
+		  </div>
+		</div>
+	</ng-container>
+	</div>
+</div>

@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand"  routerLinkActive="active" routerLink="/"><img src="./assets/covid.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link"  routerLinkActive="active" routerLink="/" >Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLinkActive="active" routerLink="/feeds">Feeds</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link"  routerLinkActive="active" routerLink="/donate">Donate</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link"  routerLinkActive="active" routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<div class="container-fluid py-2">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small text-light py-3" style="background-color: #191E26">
+
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-2">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Company name</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a   routerLinkActive="active" routerLink="/" >Home</a>
+        </p>
+        <p>
+          <a   routerLinkActive="active" routerLink="/feeds" >Feeds</a>
+        </p>
+        <p>
+          <a   routerLinkActive="active" routerLink="/donate" >Donate</a>
+        </p>
+        <p>
+          <a   routerLinkActive="active" routerLink="/contact" >Contact</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fa fa-home mr-3"></i> Mau, U.P, India</p>
+        <p>
+          <i class="fa fa-envelope mr-3"></i>Samad06june@gmai.com</p>
+        <p>
+          <i class="fa fa-phone mr-3"></i>7068447749</p>
+        
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-1">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/">covid-care.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

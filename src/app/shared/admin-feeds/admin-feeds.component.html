@@ -1,0 +1,38 @@
+<h3 class="text-center m-3">Admin Dashboard</h3><hr>    
+			<br>
+<div class="row">
+	<div class="col-md-8">
+		<form (ngSubmit)="createOrUpdate()" >
+
+	<div class="form-group">
+		<label for="_id">Id</label>
+		<input 
+		type="text" name="_id" placeholder="Auto Generated" disabled class="form-control" [(ngModel)]="feed._id">
+	</div>
+
+	<div class="form-group">
+		<label for="title">Title</label>
+		<input type="text" name="title" class="form-control" [(ngModel)]="feed.title">
+	</div>
+
+	<div class="form-group">
+		<label for="author">Author</label>
+		<input type="text" name="author" class="form-control" [(ngModel)]="feed.author">
+	</div>
+
+
+	<div class="form-group">
+	<div class="custom-control custom-checkbox">
+	  <input type="checkbox" class="custom-control-input" name="newOne" [(ngModel)]="feed.newOne" id="newOne">
+	  <label class="custom-control-label" for="newOne">New Content</label>
+	</div>	
+	</div>
+
+	<div class="form-group">
+		<label for="content">Content</label>
+		<textarea type="text" name="content" class="form-control" rows="3" [(ngModel)]="feed.content"></textarea>
+	</div>
+	<input type="submit" name="" class="btn btn-success" value="Submit">
+</form>
+	</div>
+</div>

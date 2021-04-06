@@ -1,0 +1,6 @@
+<h5 class="feeds-header">Feeds list</h5><hr>
+		<ul class="list-group">
+		 <ng-container  *ngFor="let feed of feeds">
+		  <li class="list-group-item" (click)="activeFeed(feed._id)"><h6>{{ feed.title }}</h6></li>
+		 </ng-container>
+		</ul>

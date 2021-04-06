@@ -1,0 +1,17 @@
+<div class="row my-5">
+	<div class="col-md-2" >
+		<h5 class="feeds-header">Recent</h5><hr>
+		<ul class="list-group">
+	  <ng-container *ngFor="let feed of feeds">
+		  <li class="list-group-item" *ngIf="feed.newOne === true"><h6>{{ feed.title }}</h6></li>
+	  </ng-container>
+		</ul>
+	</div>
+	<div class="col-md-7 jumbotron">
+		<h2 class="feeds-header">Feeds</h2><hr>
+		<app-cards [selectedFeed]="addedFeed"></app-cards>
+	</div>
+	<div class="col-md-3">
+		<app-feeds-list (addedFeed)="onAddedFeed($event)"></app-feeds-list>
+	</div>
+</div>

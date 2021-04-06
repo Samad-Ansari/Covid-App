@@ -1,0 +1,30 @@
+  <h3 class="text-center m-3">Admin Feed list</h3><hr>    
+     <div class="row">
+       <div class="col-md-12">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Operations</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let feed of feeds; index as i">
+                  <tr>
+                    <th scope="row">{{ i+1 }}</th>
+                    <td>{{ feed.title }}</td>
+                    <td>{{ feed.author }}</td>
+                    <td>{{feed.uploaded | date:'mediumDate'}}</td>
+                    <td>
+                      <button (click)="doUpdate(feed)" class="m-2 btn btn-primary btn-sm"> Update
+                      </button>
+                      <button (click)="doDelete(feed)" class="m-2 btn btn-danger btn-sm"> Danger
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+               </table>
+       </div>
+     </div>
